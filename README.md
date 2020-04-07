@@ -1,53 +1,22 @@
-# Project Title
+# RootSalesMan
 
-<!-- プロジェクトの概要を 1 段落でここに書きます -->
+循環セールスマン問題を解きます．アニメの聖地巡礼を効率よく行うことができます．
 
-## Getting Started / スタートガイド
+## 実行環境
 
-<!-- プロジェクトを複製してローカル端末で実行し、開発や検証ができるまでの手順を説明します。実際のシステムにプロジェクトをデプロイする方法については、デプロイの項目を参照してください。 -->
+python 3.6.4
+c++17(clang version 11.0.3)
 
-### Prerequisites / 必要条件
+config.txtというファイルを作り，そちらにgoogle APIのAPIキーを書いてください．
+google APIはPlace APIとDistance Matrix APIを使っています．
 
-<!-- プロジェクトを走らせるためにはどんなソフトウェアが必要で、それらをどのようにインストールするか -->
+また，行きたい地点をカンマ区切り一行で[destination.csv](./destination.csv)に記述してください．
+その後以下のコマンドで実行できます．
 
-<!--
 ```
-$ install ソフトウェア1
-$ install ソフトウェア2
+git clone https://github.com/xryuseix/RootSalesMan
+sh RootSalesMan.sh
 ```
--->
-
-### Installing / インストール
-
-<!-- 動作する開発環境の構築方法を段階的に例示します -->
-
-<!--
-```
-$ コマンド1
-$ コマンド2
-```
--->
-
-<!-- それから -->
-
-<!--
-```
-上の通りに打つと出力されるログの例
-```
--->
-
-## Deployment / デプロイ
-
-<!-- 実際のシステムにデプロイするための補足的な説明を行います -->
-
-## Built With / 協働するシステムのリスト
-
-<!-- 協働するシステムのリスト
-
-* [Dropwizard](URL) - 使用した web フレームワーク
-* [Maven]URL - 依存関係管理ソフトウェア
-* [ROME](URL) - 使用した RSS フィード生成
--->
 
 ## Contributing / コントリビューション
 
@@ -61,13 +30,4 @@ Please read [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for details on our code
 
 このプロジェクトへの貢献者のリストもご覧ください。
 
-See also the list of [contributors](https://github.com/xryuseix/project/contributors) who participated in this project.
-<!-- 上の"project"にプロジェクト名を入れるの忘れずに！！！！！ -->
-
-## Acknowledgments / 謝辞
-
-<!--
-* コードを書いた人への感謝
-* 何からインスピレーションを得たか
-* その他
--->
+See also the list of [contributors](https://github.com/xryuseix/RootSalesMan/contributors) who participated in this project.

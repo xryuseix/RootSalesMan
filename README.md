@@ -4,8 +4,8 @@
 
 ## 実行環境
 
-python 3.6.4
-c++17(clang version 11.0.3)
+* python 3.6.4
+* c++17(clang version 11.0.3)
 
 config.txtというファイルを作り，そちらにgoogle APIのAPIキーを書いてください．
 google APIはPlace APIとDistance Matrix APIを使っています．
@@ -14,7 +14,6 @@ google APIはPlace APIとDistance Matrix APIを使っています．
 その後以下のコマンドで実行できます．
 
 ```
-git clone https://github.com/xryuseix/RootSalesMan
 sh RootSalesMan.sh
 ```
 

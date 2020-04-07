@@ -2,16 +2,18 @@
 
 import requests
 import csv
+from time import sleep
 
 # APIリクエストを送信
 def getPosition(pos):
     with open('./config.txt') as f:
         API_KEY = f.read()
-    url = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
-    requestString = '{}?language=ja&key={}&input={}&inputtype={}'.format(url, API_KEY, pos, 'textquery')
+    url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json'
+    requestString = '{}?language=ja&key={}&input={}&inputtype={}&fields=geometry'.format(url, API_KEY, pos, 'textquery')
     data = requests.get(requestString).json()
-    ido = data['results'][0]['geometry']['location']['lat'] if data['status']=='OK' else -1
-    keido = data['results'][0]['geometry']['location']['lng'] if data['status']=='OK' else -1
+    print(data)
+    ido = data['candidates'][0]['geometry']['location']['lat'] if data['status']=='OK' else -1
+    keido = data['candidates'][0]['geometry']['location']['lng'] if data['status']=='OK' else -1
     return ido, keido
 
 def readCSV():
@@ -29,5 +31,6 @@ def writeCSV(arr):
 
 destinations = readCSV()
 for li in destinations:
-    li[1], li[2] = getPosition(li[0])
+    if li[1]=='-1' or li[2]=='-1':
+        li[1], li[2] = getPosition(li[0])
 writeCSV(destinations)

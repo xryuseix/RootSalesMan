@@ -1,3 +1,3 @@
 python getDistance.py
-gpp salesMan.cpp
+g++ -std=c++1z -fsanitize=undefined -I . salesMan.cpp
 ./a.out
